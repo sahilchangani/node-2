@@ -28,12 +28,8 @@ module.exports.addAdminData = async (req, res) => {
   });
 };
 module.exports.viewAdmin = async (req, res) => {
-  if(req.cookies.adminData){
   let data = await schema.find();
   res.render("viewAdmin", { data });
-  }else{
-    res.redirect("/");
-  }
 };
 module.exports.deleteAdmin = async (req, res) => {
   let singleData = await schema.findById(req.query.id);
