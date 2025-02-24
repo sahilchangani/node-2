@@ -1,0 +1,170 @@
+<div id="wrapper">
+    <div class="container">
+      <header class="left header">
+        <div class="title-header">
+          <h1 id="title" class="text-center">Task Management</h1>
+          <p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+        </div>
+      </header>    
+  
+    <form id="survey-form" class="right" action="/insert"  method="post">
+      <div class="form-set">
+        <label id="name-label" for="name">Name</label>
+          <input
+                 type="text"
+                 name="name"
+                 id="name"
+                 class="form-control"
+                 placeholder="Enter your name"
+                 required/>
+      </div>
+  
+      <div class="form-set">
+        <label id="email-label" for="email">E-mail</label>
+          <input
+                 type="email"
+                 name="email"
+                 id="email"
+                 class="form-control"
+                 placeholder="Enter your e-mail"
+                 required/>
+      </div>
+      <div class="form-set">
+        <label id="name-label" for="name">Task</label>
+          <input
+                 type="text"
+                 name="task"
+                 id="task"
+                 class="form-control"
+                 placeholder="Enter your task"
+                 required/>
+      </div>
+  
+     
+  
+   
+  
+      
+  
+     
+  
+     
+    
+     <div class="form-set">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+     </div>
+    </form>
+  </div>
+
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Container */
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+header.left {
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+.title-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.title-header .description {
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+/* Form Styling */
+#survey-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-set {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-set label {
+    display: block;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-set input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.form-set input:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header.left {
+        padding: 20px;
+    }
+
+    #survey-form {
+        padding: 20px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+</style>

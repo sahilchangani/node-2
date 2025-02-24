@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Responsive Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 	<link rel="stylesheet" href="assets/css/style.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon icon -->
+</head>
+
+<table class="table">
+  <thead>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Task</th>
+    <th>Button</th>
+    
+  </thead>
+  <tbody>
+    <% data.map((e,i)=>{%>
+      <tr>
+        <th scope="row"><%=i+1%></th>
+        <td><%=e.name%></td> 
+        <td><%=e.email%></td>
+        <td><%=e.task%></td>
+   
+      
+<td><a href="/delete?id=<%=e.id%>"><button><button>Delete</a>
+        </td>
+      </tr>
+    <%})%>
+    
+
+  </tbody>
+</table>
+
+</body>
+
+</html>
+
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #333;
+    color: #fff;
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    font-size: 1.1em;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styling */
+.table button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+
+/* Edit and Delete Buttons with Different Colors */
+
+
+
+
+
+
+
+
+/* Icons */
+.table i {
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .table th, .table td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .table button {
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+
+    .table i {
+        font-size: 1em;
+    }
+}
+
+</style>
